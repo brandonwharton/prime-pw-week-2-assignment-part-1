@@ -23,7 +23,7 @@ let food = 'Red Curry';
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
 let pets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 0;
+let friendsPets = 2;
 // 11 - Add two pets to your `pets` variable
 pets += 2;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
@@ -67,9 +67,28 @@ if ( pets <= friendsPets ) {
 } else {
   mostPets = pets;
 }
-console.log(mostPets);
+console.log( mostPets );
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+
+//One way
+switch ( true ) {
+  case ( pets < friendsPets ):
+    mostPets = friendsPets;
+    break;
+  case ( pets === friendsPets ):
+    mostPets = friendsPets;
+    break;
+  case ( pets > friendsPets ):
+    mostPets = pets;
+    break;
+  default:
+    console.log( 'Get some pets first.' );
+    break;
+}
+console.log( 'Switch 1', mostPets );
+
+//Second way
 switch ( pets <= friendsPets ) {
   case true:
     mostPets = friendsPets;
@@ -78,10 +97,10 @@ switch ( pets <= friendsPets ) {
     mostPets = pets;
     break;
   default:
-    console.log( 'Get some pets first.');
+    console.log( 'Get some pets first.' );
     break;
 }
-console.log(mostPets);
+console.log( 'Switch 2', mostPets );
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 adventurous ? console.log( 'Adventures are great!' )
 : console.log( 'How about we stay home?' );
