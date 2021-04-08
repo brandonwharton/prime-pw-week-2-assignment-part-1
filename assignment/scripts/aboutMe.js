@@ -14,8 +14,9 @@ let luckyNumber = 4;
 // 'My name is (full name), and I think (lucky number) is a winner!'.
 // Refer back to the videos if you need help with this one.
 console.log( 'My name is', fullName + ', and I think', luckyNumber, 'is a winner!' );
-//Or this could be done:
+// Or this could be done:
 console.log( `My name is ${fullName}, and I think ${luckyNumber} is a winner!` );
+
 // 7 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 let adventurous = true;
 // 8 - Create a variable named `food`, and set its value to a string of your favorite food
@@ -35,13 +36,13 @@ if ( adventurous ){
 } // Logs if adventurous is true.
 else {
   console.log( 'How about we stay home?' );
-} //Logs if adventurous is false.
+} // Logs if adventurous is false.
 
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
 if ( luckyNumber === 2 && adventurous ) {
   console.log( 'Roll the dice!' );
-} //For our luckyNumber of 4, nothing is logged. If we change luckyNumber to 2,
+} // For our luckyNumber of 4, nothing is logged. If we change luckyNumber to 2,
   //and since adventurous is "true" above, it would then log "Roll the dice!".
 
 // 15 - Write a conditional that console logs "I can have more pets!"
@@ -51,11 +52,14 @@ if ( luckyNumber === 2 && adventurous ) {
 // if the value of `pets` is greater than the value of `allowedPets`.
 if ( pets < allowedPets ){
   console.log( 'I can have more pets!' );
-} else if ( pets === allowedPets ) {
+} // Logs if pets is less than allowedPets.
+else if ( pets === allowedPets ) {
   console.log( 'I have enough pets' );
-} else {
+} // Logs if the variables are the same.
+else {
   console.log( 'Oh no, I have too many pets!' );
-}
+} // Logs in any other cases, this one being if pets exceeds allowedPets.
+
 // STRETCH GOALS:
 
 // 16 - Make a variable called `mostPets` and a conditional that
@@ -68,39 +72,44 @@ let mostPets;
 
 if ( pets <= friendsPets ) {
   mostPets = friendsPets;
-} else {
+} // Assigns mostPets to friendsPets, since if friendsPets is greater that's the
+  // value we want, and if they're the same we could assign mostPets to either.
+else {
   mostPets = pets;
-}
+} // Properly assigning mostPets if pets is the greater number.
 console.log( mostPets );
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
 //One way
-switch ( true ) {
+switch ( true ) {  // In this example, I'm using the switch to determine if
+                   // the conditions in each case come out as true.
   case ( pets < friendsPets ):
     mostPets = friendsPets;
     break;
   case ( pets === friendsPets ):
-    mostPets = friendsPets;
+    mostPets = friendsPets; // I could have set mostPets to pets here instead.
     break;
   case ( pets > friendsPets ):
     mostPets = pets;
     break;
-  default:
+  default: // Not sure if a default was necessary here.
     console.log( 'Get some pets first.' );
     break;
 }
 console.log( 'Switch 1', mostPets );
 
 //Second way
-switch ( pets <= friendsPets ) {
+switch ( pets <= friendsPets ) { // This one is nearly identical to my if else
+                                 // from question 16, simply checking two cases.
   case true:
     mostPets = friendsPets;
     break;
   case false:
     mostPets = pets;
     break;
-  default:
+  default: // Same story: not sure if I needed to make a default for a switch like
+           // this with only two possible outcomes.
     console.log( 'Get some pets first.' );
     break;
 }
