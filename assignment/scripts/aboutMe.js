@@ -24,7 +24,7 @@ let food = 'Red Curry';
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
 let pets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 2;
+let friendsPets = 0;
 // 11 - Add two pets to your `pets` variable
 pets += 2;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
@@ -114,6 +114,7 @@ switch ( pets <= friendsPets ) { // This one is nearly identical to my if else
     break;
 }
 console.log( 'Switch 2', mostPets );
+
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 adventurous ? console.log( 'Adventures are great!' )
 : console.log( 'How about we stay home?' );
